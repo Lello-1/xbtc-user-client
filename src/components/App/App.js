@@ -8,6 +8,7 @@ import {
 import Header from '../Header';
 import Register from '../Register';
 import Login from '../Login';
+import Dashboard from '../Dashboard';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
+          <Route path="/user/dashboard" component={Dashboard} />
           <Route path="/user/login" component={Login} />
           <Route path="/" component={Register} />
         </Switch>
