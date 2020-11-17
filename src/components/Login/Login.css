@@ -1,9 +1,9 @@
-.Register {
+.Login {
   display: grid;
   grid-template-columns: 33.33333333% 33.3333333333% 33.33333333333333%;
 }
 
-.my_register_form {
-  grid-column: 2 / span 2;
+.my_form {
+  grid-column: 1 / span 2;
   padding-top: 100px;
 }

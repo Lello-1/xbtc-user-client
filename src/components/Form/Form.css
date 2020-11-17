@@ -1,0 +1,70 @@
+.Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.Form h3 {
+  color: #4DAAA7;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.register_form, .login_form {
+  text-align: center;
+  width: 50%;
+}
+
+.names {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Form input {
+  font-size: 1.1em;
+  border: none;
+  background-color: #F3F3F5;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.Form input::placeholder {
+  color: #b9b9b9;
+}
+
+.names input {
+  width: 48.5%;
+}
+
+.details {
+  margin-bottom: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.details input {
+  margin-top: 15px;
+  display: inline-block;
+  width: 100%;
+}
+
+.login_form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.login_form a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-bottom: 50px;
+}
+
+.login_form a:hover {
+  text-decoration: underline;
+}

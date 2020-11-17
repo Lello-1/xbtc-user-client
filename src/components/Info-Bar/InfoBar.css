@@ -1,0 +1,25 @@
+.InfoBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 100px;
+  height: 100vh;
+  background: linear-gradient(to right top, #4daaa7, #1f4745);
+}
+
+.infobar_content {
+  width: 55%;
+  text-align: center;
+  color: #fff;
+}
+
+.infobar_content h3 {
+  font-size: 2em;
+}
+
+.infobar_content p {
+  font-size: 1.4em;
+  font-weight: 300;
+  margin: 20px 0 50px 0;
+}
