@@ -19,3 +19,7 @@
 .Sidebar .dashboard_link {
   font-size: 1.7em;
 }
+
+.Sidebar .dashboard_link img {
+  color: white;
+}

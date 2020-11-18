@@ -2,6 +2,7 @@ import './Form.css';
 import Button from '../Button';
 
 const Form = ({ formButton }) => {
+  
   return (
     <div className="Form">
       { formButton === 'Sign Up' ? <form className="register_form" action="">

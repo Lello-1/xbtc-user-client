@@ -1,0 +1,84 @@
+.Mainbar {
+  color: #333;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 5%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 25px;
+  box-shadow: 0 7px 10px -10px #777;
+}
+
+.Mainbar:hover {
+  box-shadow: 0 7px 10px -6px #777;
+}
+
+/* DEPOSIT SECTION */
+.Mainbar .deposit_section {
+  display: grid;
+  grid-column: 1 / span 1;
+  align-items: center;
+}
+
+.deposit_section h3 {
+  font-size: 2em;
+  font-weight: 700;
+
+}
+
+/* BALANCE SECTION */
+.Mainbar .balance_section {
+  display: grid;
+  align-items: center;
+  grid-column: 2 / span 1;
+}
+
+/* WITHDRAW SECTION */
+.Mainbar .withdraw_section {
+  display: grid;
+  align-items: center;
+  grid-column: 3 / span 1;
+}
+
+/* ALL SECTIONS */
+.Mainbar .deposit, .Mainbar .balance, .Mainbar .withdraw, .Mainbar .investment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Mainbar .profit, .Mainbar .growth, .Mainbar .roi {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deposit_section p, .balance_section p, .withdraw_section p {
+  display: inline-block;
+  font-size: 1.6em;
+}
+
+.deposit_section span, .balance_section span, .withdraw_section span {
+  display: flex;
+  font-size: 2.1em;
+  font-weight: 700;
+  align-items: center;
+}
+
+/* BITCOIN IMAGE */
+.Mainbar .bitcoin {
+  margin: 0 25px 0 0;
+}
+
+.Mainbar .package_percentage {
+  font-size: 1.5em;
+}
+
+.Mainbar .comingSoon {
+  font-size: 1.6em;
+  color: #CACACA;
+}
+
+.Mainbar .greyed {
+  color: #CACACA;
+}
