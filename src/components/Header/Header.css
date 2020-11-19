@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 .Header {
   position: fixed;
   width: 100%;
@@ -66,7 +62,7 @@
   position: absolute;
   left: 25%;
   width: 50%;
-  padding-top: 1px;
+  padding-top: 3px;
   transform: skew(-52deg);
   -webkit-transform: skewX(-52deg);
   text-decoration: none;

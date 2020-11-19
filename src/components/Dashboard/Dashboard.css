@@ -1,7 +1,6 @@
 .dashboard_grid {
   display: grid;
   grid-template-columns: 20% auto auto auto auto;
-  height: 100vh;
 }
 
 .dashboard_main {

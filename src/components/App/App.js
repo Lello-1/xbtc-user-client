@@ -9,6 +9,7 @@ import Header from '../Header';
 import Register from '../Register';
 import Login from '../Login';
 import Dashboard from '../Dashboard';
+import Profile from '../Profile';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
+          <Route path="/user/profile" component={Profile} />
           <Route path="/user/dashboard" component={Dashboard} />
           <Route path="/user/login" component={Login} />
           <Route path="/" component={Register} />

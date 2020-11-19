@@ -1,0 +1,21 @@
+.Profilebar {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  background-color: #fff;
+  height: 100%;
+  border-radius: 5px;
+  padding: 25px;
+  box-shadow: 0 7px 10px -10px #777;
+}
+
+.profilebar_contents {
+  display: grid;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.profilebar_contents span {
+  font-weight: 400;
+  margin-left: 15px;
+}

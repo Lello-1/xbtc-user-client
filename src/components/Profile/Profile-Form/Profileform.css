@@ -1,0 +1,55 @@
+.ProfileForm {
+  display: grid;
+  align-items: center;
+  background-color: #fff;
+  height: 100%;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 7px 10px -10px #777;
+  text-align: center;
+}
+
+/* UPDATE PROFILE FORM */
+.update_profile_form input{
+  font-size: 1.1em;
+  border: none;
+  padding: 15px;
+  background-color: #f3f3f5;
+  border-radius: 3px;
+}
+
+.update_profile_form input::placeholder {
+  color: #b9b9b9;
+}
+
+.names_input_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.names_input {
+  width: 49%;
+}
+
+.profile_input {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.ProfileForm h3 {
+  font-size: 2.5em;
+  color: #4daaa7;
+  margin-bottom: 35px;
+}
+
+.update_profile_form .Button {
+  margin-top: 35px;
+  display: flex;
+}
+
+.update_profile_form .Button .form_button{
+  width: 33.3%;
+  font-size: 1.3em;
+  padding: 13px;
+}
