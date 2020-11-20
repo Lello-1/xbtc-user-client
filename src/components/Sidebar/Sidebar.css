@@ -23,3 +23,28 @@
 .Sidebar .dashboard_link img {
   color: white;
 }
+
+footer {
+  position: absolute;
+  width: 20%;
+  height: 10 rem;
+  bottom: 0;
+  color: #fff;
+  padding: 0 0 15px 50px;
+}
+
+footer h3 {
+  font-size: 1.5em;
+  font-weight:400;
+  margin-bottom: 15px;
+}
+
+footer p {
+  font-size: 1em;
+  font-weight:400;
+  margin-bottom: 5px;
+}
+
+.footer_email {
+  margin-bottom: 30px;
+}
