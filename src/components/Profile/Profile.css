@@ -7,9 +7,9 @@
 .profile_container {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: 13.75% 13.75% 13.75% 13.75% 13.75% 13.75%;
+  grid-template-rows: 14.083% 14.083% 14.083% 14.083% 14.083% 14.083%;
   column-gap: 25px;
-  row-gap: 3.5%;
+  row-gap: 3.1%;
   padding: 125px 25px 25px 25px;
   grid-column: 2 / span 4;
   grid-row: 1 / span 1;

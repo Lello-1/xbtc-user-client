@@ -29,8 +29,8 @@ const ProfileForm = ({ updateProfile }) => {
       <React.Fragment>
       <form className="update_profile_form" action="">
         <h3>Change Password</h3>
-        <input className="profile_input" type="password" placeholder="Confirm Password" />
-        <input className="profile_input" type="password" placeholder="Confirm Password" />
+        <input className="profile_input" type="password" placeholder="Old Password" />
+        <input className="profile_input" type="password" placeholder="New Password" />
         <input className="profile_input" type="password" placeholder="Confirm Password" />
         <Button formButton={items.formButton} />
       </form>
