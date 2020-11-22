@@ -6,7 +6,7 @@ const Sidebar = () => {
       <a className="dashboard_link" href="/user/dashboard">Dashboard</a>
       <a href="/user/profile">Profile</a>
       <a href="/user/account-history">Account History</a>
-      <a href="/user/dashboard">Deposit Bitcoin</a>
+      <a href="/user/deposit">Deposit Bitcoin</a>
       <a href="/user/dashboard">Withdraw Bitcoin</a>
       <a href="/user/dashboard">Logout</a>
 
