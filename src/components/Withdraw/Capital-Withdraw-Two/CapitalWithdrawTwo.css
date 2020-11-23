@@ -1,0 +1,61 @@
+.CapitalWithdrawTwo {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.capital_withdraw_two_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2 / span 4;
+  margin-top: 100px;
+  background-color: #EBF0F1;
+}
+
+.confirm_capital_withdraw {
+  width: 40%;
+  padding: 4%;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 7px 10px -10px #777;
+}
+
+.confirm_capital_withdraw p {
+  font-size: 1.5em;
+}
+
+.confirm_capital_withdraw p:nth-child(1) {
+  color: red;
+  margin-bottom: 10%;
+}
+
+.confirm_capital_withdraw p:nth-child(2) {
+  margin-bottom: 3%;
+}
+
+.confirm_capital_withdraw img {
+  width: 7%;
+  margin-right: 4%;
+}
+
+.confirm_capital_withdraw .amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.confirm_capital_withdraw .amount .bitcoin_number {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.confirm_capital_withdraw .Button .form_button {
+  font-size: 1.3em;
+  width: 45%;
+}
+
+.confirm_capital_withdraw .Button .form_button:hover {
+  width: 55%;
+}

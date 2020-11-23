@@ -1,0 +1,151 @@
+.WithdrawOne {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.withdraw_one_container {
+  display: flex;
+  grid-column: 2 / span 4;
+  margin-top: 100px;
+  background-color: #EBF0F1;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.profit_withdraw_bar, .capital_withdraw_bar {
+  padding: 4%;
+  height: 70%;
+  width: 45%;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 7px 10px -10px #777;
+}
+
+.profit_withdraw_bar h3, .capital_withdraw_bar h3 {
+  font-size: 2.3em;
+  color: #4daaa7;
+  margin-bottom: 5%;
+}
+
+.profit_withdraw_bar p, .capital_withdraw_bar p {
+  font-size: 1.4em;
+  display: inline-block;
+}
+
+.profit_withdraw_bar p:nth-child(1), .capital_withdraw_bar p:nth-child(1) {
+  margin-right: 10%;
+  width: 100%;
+}
+
+.profit_withdraw_bar p:nth-child(3), .capital_withdraw_bar p:nth-child(3) {
+  font-size: 1.8em;
+  font-weight: 600;
+  width: 100%;
+}
+
+.profit_withdraw_bar img, .capital_withdraw_bar img {
+  width: 7%;
+}
+
+.align {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.profit_withdraw_bar input, .capital_withdraw_bar input {
+  border: none;
+  background-color: #F3F3F5;
+  padding: 15px 15px 15px 30px;
+  font-size: 1.4em;
+  margin: 1.5% 0;
+  width: 100%;
+}
+
+.withdraw_one_container input::placeholder {
+  color: #b9b9b9;
+}
+
+.withdraw_one_container .Button .form_button {
+  width: 40%;
+  font-size: 1.4em;
+  margin-top: 5%;
+}
+
+.withdraw_one_container .Button .form_button:hover {
+  width: 50%;
+}
+
+/* RANGE SLIDER */
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+  padding: 15px 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #2c3e50;
+  cursor: pointer;
+  margin-top: -7px;
+  transition: 0.3s;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  background: #4daaa7;
+}
+
+input[type=range]::-webkit-slider-thumb:active {
+  box-shadow: 0 0 0 3px #fff,
+              0 0 0 6px #4daaa7;
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  border: 1px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #2c3e50;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  border: 1px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #2c3e50;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 7px;
+  cursor: pointer;
+  background: #d7dcdf;
+  border-radius: 3px;
+}

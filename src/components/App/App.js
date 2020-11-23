@@ -14,6 +14,11 @@ import AccountHistory from '../Account-History';
 import Deposit from '../Deposit/Deposit-Step-One';
 import DepositTwo from '../Deposit/Deposit-Step-Two';
 import DepositThree from '../Deposit/Deposit-Step-Three';
+import Withdraw from '../Withdraw/Withdraw-One';
+import CapitalWithdrawTwo from '../Withdraw/Capital-Withdraw-Two';
+import CapitalWithdrawThree from '../Withdraw/Capital-Withdraw-Three';
+import ProfitWithdrawTwo from '../Withdraw/Profit-Withdraw-Two';
+import ProfitWithdrawThree from '../Withdraw/Profit-Withdraw-Three';
 
 const App = () => {
   return (
@@ -21,6 +26,11 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
+          <Route exact path="/user/profit-withdraw-three" component={ProfitWithdrawThree} />
+          <Route exact path="/user/profit-withdraw-two" component={ProfitWithdrawTwo} />
+          <Route exact path="/user/capital-withdraw-three" component={CapitalWithdrawThree} />
+          <Route exact path="/user/capital-withdraw-two" component={CapitalWithdrawTwo} />
+          <Route exact path="/user/withdraw" component={Withdraw} />
           <Route exact path="/user/deposit-three" component={DepositThree} />
           <Route exact path="/user/deposit-two" component={DepositTwo} />
           <Route exact path="/user/deposit" component={Deposit} />

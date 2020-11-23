@@ -32,7 +32,7 @@ const ProfileForm = ({ updateProfile }) => {
         <input className="profile_input" type="password" placeholder="Old Password" />
         <input className="profile_input" type="password" placeholder="New Password" />
         <input className="profile_input" type="password" placeholder="Confirm Password" />
-        <Button formButton={items.formButton} />
+        <Button formButton="Change Password" />
       </form>
       </React.Fragment>}
     </div>

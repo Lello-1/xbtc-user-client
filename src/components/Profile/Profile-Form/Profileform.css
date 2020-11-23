@@ -45,11 +45,13 @@
 
 .update_profile_form .Button {
   margin-top: 35px;
-  display: flex;
 }
 
-.update_profile_form .Button .form_button{
+.update_profile_form .Button .form_button {
   width: 33.3%;
   font-size: 1.3em;
-  padding: 13px;
+}
+
+.update_profile_form .Button .form_button:hover {
+  width: 43.3%;
 }

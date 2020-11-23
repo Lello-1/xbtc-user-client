@@ -8,7 +8,7 @@ const DepositThree = () => {
     <div className="DepositThree">
       <Sidebar />
       <div className="deposit_three_container">
-        <div className="transaction_bar">
+        <div className="transaction_id_bar">
           <h3>Enter Transaction ID</h3>
           <input className="transaction_id" type="text" placeholder="Transaction ID" />
           <Button />

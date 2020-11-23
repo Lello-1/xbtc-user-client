@@ -1,0 +1,69 @@
+.CapitalWithdrawThree {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.capital_withdraw_three_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2 / span 4;
+  margin-top: 100px;
+  background-color: #EBF0F1;
+}
+
+.capital_withdraw_three_container .authenticate_withdrawal {
+  width: 40%;
+  padding: 4%;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 7px 10px -10px #777;
+}
+
+.capital_withdraw_three_container .authenticate_withdrawal h3 {
+  font-size: 2.3em;
+  color: #4daaa7;
+  margin-bottom: 12%;
+}
+
+.capital_withdraw_three_container .authenticate_withdrawal p {
+  font-size: 1.5em;
+  margin-bottom: 7%;
+}
+
+.capital_withdraw_three_container .authenticate_withdrawal .enter_code {
+  border: none;
+  background-color: #F3F3F5;
+  padding: 15px 15px 15px 30px;
+  font-size: 1.3em;
+  margin-bottom: 12%;
+  width: 100%;
+}
+
+.capital_withdraw_three_container .enter_code::placeholder {
+  color: #B9B9B9;
+}
+
+.capital_withdraw_three_container .authenticate_buttons {
+  display: flex;
+}
+
+.capital_withdraw_three_container .Button .form_button {
+  font-size: 1.3em;
+  width: 80%;
+}
+
+.capital_withdraw_three_container .Button .form_button:hover {
+  width: 100%;
+}
+
+.capital_withdraw_three_container .Button .ghost_button {
+  font-size: 1.3em;
+  color: gray;
+  width: 100%;
+}
+
+.capital_withdraw_three_container .Button {
+  width: 100%;
+}
