@@ -3,10 +3,11 @@ import InfoBar from '../Info-Bar';
 import Form from '../Form';
 
 const Login = () => {
+  
   const pageItems = {
     heading: 'Hello, Friend!',
     paragraph: 'Enter your personal details and start your journey with us.',
-    ghostButtonHref: '/',
+    ghostButtonHref: '/register',
     ghostButton: 'ghost',
     ghostButtonContent: 'Sign Up',
     formButton: 'Sign In'

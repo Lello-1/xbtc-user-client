@@ -39,7 +39,7 @@ const App = () => {
           <Route exact path="/user/dashboard" component={Dashboard} />
           <Route exact path="/user/login" component={Login} />
           <Route exact path="/">
-            <Redirect to="/register" />
+            <Redirect to="/user/login" />
           </Route>
           <Route exact path="/register" component={Register} />
         </Switch>
