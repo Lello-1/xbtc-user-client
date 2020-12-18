@@ -1,6 +1,16 @@
 import './Dashboard.css';
 import Sidebar from '../Sidebar';
 import Mainbar from '../Main-Bar';
+import { connect } from "react-redux";
+import { logout } from "../../actions/session";
+
+const mapStateToProps = ({ session }) => ({
+  session
+});
+
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logout())
+});
 
 const Dashboard = () => {
 
@@ -43,4 +53,7 @@ const Dashboard = () => {
   );
 }
 
-export default Dashboard;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+ )(Dashboard);

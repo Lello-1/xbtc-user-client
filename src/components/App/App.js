@@ -19,6 +19,7 @@ import CapitalWithdrawTwo from '../Withdraw/Capital-Withdraw-Two';
 import CapitalWithdrawThree from '../Withdraw/Capital-Withdraw-Three';
 import ProfitWithdrawTwo from '../Withdraw/Profit-Withdraw-Two';
 import ProfitWithdrawThree from '../Withdraw/Profit-Withdraw-Three';
+import { AuthRoute, ProtectedRoute } from "../../utils/route";
 
 const App = () => {
   return (
@@ -26,22 +27,22 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/user/profit-withdraw-three" component={ProfitWithdrawThree} />
-          <Route exact path="/user/profit-withdraw-two" component={ProfitWithdrawTwo} />
-          <Route exact path="/user/capital-withdraw-three" component={CapitalWithdrawThree} />
-          <Route exact path="/user/capital-withdraw-two" component={CapitalWithdrawTwo} />
-          <Route exact path="/user/withdraw" component={Withdraw} />
-          <Route exact path="/user/deposit-three" component={DepositThree} />
-          <Route exact path="/user/deposit-two" component={DepositTwo} />
-          <Route exact path="/user/deposit" component={Deposit} />
-          <Route exact path="/user/account-history" component={AccountHistory} />
-          <Route exact path="/user/profile" component={Profile} />
-          <Route exact path="/user/dashboard" component={Dashboard} />
-          <Route exact path="/user/login" component={Login} />
+          <ProtectedRoute exact path="/user/profit-withdraw-three" component={ProfitWithdrawThree} />
+          <ProtectedRoute exact path="/user/profit-withdraw-two" component={ProfitWithdrawTwo} />
+          <ProtectedRoute exact path="/user/capital-withdraw-three" component={CapitalWithdrawThree} />
+          <ProtectedRoute exact path="/user/capital-withdraw-two" component={CapitalWithdrawTwo} />
+          <ProtectedRoute exact path="/user/withdraw" component={Withdraw} />
+          <ProtectedRoute exact path="/user/deposit-three" component={DepositThree} />
+          <ProtectedRoute exact path="/user/deposit-two" component={DepositTwo} />
+          <ProtectedRoute exact path="/user/deposit" component={Deposit} />
+          <ProtectedRoute exact path="/user/account-history" component={AccountHistory} />
+          <ProtectedRoute exact path="/user/profile" component={Profile} />
+          <ProtectedRoute exact path="/user/dashboard" component={Dashboard} />
+          <AuthRoute exact path="/user/register" component={Register} />
+          <AuthRoute exact path="/user/login" component={Login} />
           <Route exact path="/">
             <Redirect to="/user/login" />
           </Route>
-          <Route exact path="/register" component={Register} />
         </Switch>
       </Router>
     </div>

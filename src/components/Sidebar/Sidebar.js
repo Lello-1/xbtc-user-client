@@ -1,6 +1,16 @@
 import './Sidebar.css';
+import { logout } from "../../actions/session";
+import { connect } from "react-redux";
 
-const Sidebar = () => {
+const mapStateToProps = ({ session }) => ({
+  session
+});
+
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logout())
+});
+
+const Sidebar = ({ logout }) => {
   return (
     <div className="Sidebar">
       <a className="dashboard_link" href="/user/dashboard">Dashboard</a>
@@ -8,7 +18,7 @@ const Sidebar = () => {
       <a href="/user/account-history">Account History</a>
       <a href="/user/deposit">Deposit Bitcoin</a>
       <a href="/user/withdraw">Withdraw Bitcoin</a>
-      <a href="/user/dashboard">Logout</a>
+      <a href="#" onClick={logout} >Logout</a>
 
       <footer>
         <h3>Contact Us</h3>
@@ -20,4 +30,7 @@ const Sidebar = () => {
   );
 }
 
-export default Sidebar;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+) (Sidebar);
