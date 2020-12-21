@@ -1,9 +1,7 @@
 import './AccHistoryBar.css';
 import AccountItem from '../Account-Item';
-import accHistoryData from '../../../Mock-data/accHistoryData';
-import depWithData from '../../../Mock-data/depWithData';
 
-const AccHistoryBar = ({ accountHistory }) => {
+const AccHistoryBar = ({ accountHistory, accHistoryData, transaction }) => {
 
   return (
     <div className="AccHistoryBar">
@@ -19,9 +17,11 @@ const AccHistoryBar = ({ accountHistory }) => {
             <th>Withdraw</th>
           </tr>
         </thead>
-        {accHistoryData.map((item) => {
-          return <AccountItem item={item} accountHistory={accountHistory} key={item.week} />
-        })}
+        {accHistoryData
+        ? accHistoryData.map((item) => {
+          return <AccountItem item={item} accountHistory={accountHistory} key={item.unique_key} />
+        })
+        : null}
       </table> :
 
       <table>
@@ -31,8 +31,8 @@ const AccHistoryBar = ({ accountHistory }) => {
             <th><span id="green">Deposit</span> / <span id="red">Withdraw</span></th>
           </tr>
         </thead>
-        {depWithData.map((item) => {
-          return <AccountItem item={item} accountHistory={accountHistory} key={item.id} />
+        {transaction.map((item) => {
+          return <AccountItem item={item} accountHistory={accountHistory} key={item.unique_key} />
         })}
       </table>}
     </div>

@@ -4,6 +4,8 @@ import Form from '../../components/Form';
 import { connect } from "react-redux";
 import { signup } from "../../actions/session";
 import { useState } from 'react';
+import { useHistory } from "react-router-dom";
+
 
 const mapStateToProps = ({ errors }) => ({
   errors
@@ -15,7 +17,8 @@ const mapDispatchToProps = dispatch => ({
 
 //============== REGISTER COMPONENT =================
 const Register = ({ errors, signup }) => {
-
+  
+  const history = useHistory();
   const [error, setError] = useState('');
 
   //Page items to send to children

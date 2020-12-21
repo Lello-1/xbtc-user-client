@@ -1,12 +1,28 @@
 import './AccountHistory.css';
 import Sidebar from '../../components/Sidebar';
 import HistoryBar from './Acc-History-Bar';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const AccountHistory = () => {
 
-  useEffect(() => {
+  const [accountHistoryData, setAccountHistoryData] = useState([]);
+  const [transaction, setTransaction] = useState([]);
 
+  const options = {
+    method: 'GET',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'Application/JSON'
+    }
+  }
+
+  useEffect(() => {
+    fetch('/user/account-history', options)
+      .then((res) => res.json())
+      .then((res) => {
+        setAccountHistoryData(res.accountHistory);
+        setTransaction(res.transaction);
+      });
   }, []);
   
   return (
@@ -15,10 +31,10 @@ const AccountHistory = () => {
         <Sidebar />
         <div className="acc_history_container">
           <div className="acc_history_bar">
-            <HistoryBar accountHistory={true} />
+            <HistoryBar accountHistory={true} accountHistoryData={accountHistoryData} />
           </div>
           <div className="transaction_bar">
-            <HistoryBar accountHistory={false} />
+            <HistoryBar accountHistory={false} transaction={transaction} />
           </div>
         </div>
       </div>

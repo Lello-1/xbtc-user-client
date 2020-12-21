@@ -16,8 +16,8 @@ const AccountItem = ({ item, accountHistory }) => {
       </tr> :
 
       <tr className="AccountItem table_head">
-        {item.date ? <td>{item.date}</td> : <td>Pending...</td>}
-        {item.deposit ? <td id="green" className="amount">{item.amount}</td> : <td id="red" className="amount">{item.amount}</td>}
+        {item.confirmed ? <td>{item.date}</td> : <td>Pending...</td>}
+        {item.deposit ? <td id="green" className="amount">{item.deposit}</td> : <td id="red" className="amount">{item.withdraw}</td>}
       </tr>}
     </tbody>
   );
