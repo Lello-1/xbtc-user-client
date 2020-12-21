@@ -68,3 +68,12 @@
 .login_form a:hover {
   text-decoration: underline;
 }
+
+.country_select {
+  font-size: 1em;
+  margin: 15px 0 0 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #F3F3F5;
+  border: none;
+}

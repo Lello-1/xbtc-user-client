@@ -6,8 +6,8 @@
   height: 100%;
   background-color: #fff;
   border-radius: 5px;
-  padding: 25px;
-  box-shadow: 0 7px 10px -10px #777;
+  padding: 10px 20px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
 /* DEPOSIT SECTION */
@@ -18,7 +18,7 @@
 }
 
 .deposit_section h3 {
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 700;
 
 }
@@ -47,16 +47,17 @@
 .Mainbar .profit, .Mainbar .growth, .Mainbar .roi {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .deposit_section p, .balance_section p, .withdraw_section p {
   display: inline-block;
-  font-size: 1.6em;
+  font-size: 1.2em;
 }
 
 .deposit_section span, .balance_section span, .withdraw_section span {
   display: flex;
-  font-size: 2.1em;
+  font-size: 1.6em;
   font-weight: 700;
   align-items: center;
 }

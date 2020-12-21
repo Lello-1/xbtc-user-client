@@ -1,0 +1,18 @@
+.dashboard_grid {
+  display: grid;
+  grid-template-columns: 20% auto;
+}
+
+.dashboard_main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 20px;
+  grid-column: 2 / span 4;
+  padding: 100px 20px 20px 20px;
+  background-color: #EBF0F1;
+}
+
+.mainbar_container {
+  grid-column: 1 / span 3;
+}

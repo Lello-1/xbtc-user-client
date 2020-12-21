@@ -21,9 +21,9 @@ const Sidebar = ({ logout }) => {
       <a href="#" onClick={logout} >Logout</a>
 
       <footer>
-        <h3>Contact Us</h3>
+        {/* <h3>Contact Us</h3>
         <p>Tel: <span>07526 736 234</span></p>
-        <p className="footer_email">Email: <span>gfdbenade@gmail.com</span></p>
+        <p className="footer_email">Email: <span>gfdbenade@gmail.com</span></p> */}
         <small>&copy; Copyright 2020 XBTC. All Rights Reserved</small>
       </footer>
     </div>

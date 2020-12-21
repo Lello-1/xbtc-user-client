@@ -1,0 +1,51 @@
+.DepositOne {
+  display: grid;
+  grid-template-columns: 20% auto;
+}
+
+.DepositOne_grid {
+  display: flex;
+  grid-column: 2 / span 4;
+  margin-top: 80px;
+  background-color: #EBF0F1;
+  align-items: center;
+  justify-content: center;
+}
+
+.deposit_bar {
+  width: 50%;
+  padding: 4%;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.deposit_bar h3 {
+  font-size: 1.9em;
+  font-weight: 600;
+  color: #4daaa7;
+}
+
+.deposit_bar input::placeholder {
+  color: #B9B9B9;
+}
+
+.deposit_bar input {
+  border: none;
+  background-color: #F3F3F5;
+  padding: 15px 15px 15px 30px;
+  font-size: 1.3em;
+  margin: 8% 0 1% 0;
+  width: 100%;
+}
+
+.deposit_bar .Button .form_button {
+  font-size: 1.3em;
+  width: 40%;
+  padding: 12px 0;
+}
+
+.deposit_bar .Button .form_button:hover {
+  width: 50%;
+}

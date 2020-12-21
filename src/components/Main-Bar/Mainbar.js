@@ -2,7 +2,7 @@ import './Mainbar.css';
 import React from 'react';
 import bitcoin from '../../assets/bitcoin.png';
 
-const Mainbar = ({ item }) => {
+const Mainbar = ({ item, userData, finalmenteData }) => {
 
   return (
     <div className="Mainbar">
@@ -17,10 +17,10 @@ const Mainbar = ({ item }) => {
                 className="bitcoin" 
                 src={bitcoin} 
                 alt="bitcoin" 
-                width= "35px" 
-                height="35px"
+                width= "27px" 
+                height="27px"
               />
-              1.00000000
+              {userData.deposit}
             </span>
           </div>
           <div className="profit">
@@ -30,10 +30,10 @@ const Mainbar = ({ item }) => {
                 className="bitcoin" 
                 src={bitcoin} 
                 alt="bitcoin" 
-                width= "35px" 
-                height="35px"
+                width= "27px" 
+                height="27px"
               />
-              0.14200306
+              {userData.profit}
             </span>
           </div>
         </div>
@@ -46,15 +46,15 @@ const Mainbar = ({ item }) => {
                 className="bitcoin" 
                 src={bitcoin} 
                 alt="bitcoin" 
-                width= "35px" 
-                height="35px"
+                width= "27px" 
+                height="27px"
               />
-              1.14200306
+              {userData.balance}
             </span>
           </div>
           <div className="growth">
             <p>Growth</p>
-            <span>29.53%</span>
+            <span>{userData.growth}%</span>
           </div>
         </div>
 
@@ -66,14 +66,14 @@ const Mainbar = ({ item }) => {
                 className="bitcoin" 
                 src={bitcoin} 
                 alt="bitcoin" 
-                width= "35px" 
-                height="35px"
+                width= "27px" 
+                height="27px"
               />
-              0.15229000
+              {userData.withdraw}
             </span>
           </div>
           <div className="roi">
-            <p>ROI</p><span>15.23%</span>
+            <p>ROI</p><span>{userData.roi}%</span>
           </div>
         </div>
       </React.Fragment> :
@@ -89,15 +89,15 @@ const Mainbar = ({ item }) => {
                 className="bitcoin" 
                 src={bitcoin} 
                 alt="bitcoin" 
-                width= "35px" 
-                height="35px"
+                width= "27px" 
+                height="27px"
               />
-              1.00000000
+              {finalmenteData.deposit}
             </span>
           </div>
           <div className="investment">
             <p>Invested</p>
-            <span className="package_percentage">100%</span>
+            <span className="package_percentage">{finalmenteData.invested}%</span>
           </div>
         </div>
 
@@ -109,15 +109,15 @@ const Mainbar = ({ item }) => {
                 className="bitcoin" 
                 src={bitcoin} 
                 alt="bitcoin" 
-                width= "35px" 
-                height="35px"
+                width= "27px" 
+                height="27px"
               />
-              1.14200306
+              {finalmenteData.balance}
             </span>
           </div>
           <div className="growth">
             <p>Growth</p>
-            <span>29.53%</span>
+            <span>{finalmenteData.growth}%</span>
           </div>
         </div>
 
@@ -129,14 +129,14 @@ const Mainbar = ({ item }) => {
                 className="bitcoin" 
                 src={bitcoin} 
                 alt="bitcoin" 
-                width= "35px" 
-                height="35px"
+                width= "27px" 
+                height="27px"
               />
-              0.15229000
+              {finalmenteData.withdraw}
             </span>
           </div>
           <div className="roi">
-            <p>ROI</p><span>15.23%</span>
+            <p>ROI</p><span>{finalmenteData.roi}%</span>
           </div>
         </div>
       </React.Fragment> :
