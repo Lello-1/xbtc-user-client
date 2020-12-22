@@ -17,7 +17,7 @@ const AccountHistory = () => {
   }
 
   useEffect(() => {
-    fetch('/user/account-history', options)
+    fetch('/user/account-history-data', options)
       .then((res) => res.json())
       .then((res) => {
         setAccountHistoryData(res.accountHistory);

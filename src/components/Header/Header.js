@@ -1,11 +1,21 @@
 import './Header.css';
+import { connect } from "react-redux";
 
-const Header = () => {
+const mapStateToProps = ({ session }) => ({
+  session
+});
+
+const Header = (props) => {
+
   return (
     <div className="Header">
 
       <div className="darkest">
-        <div className="header_welcome">Welcome Lello De Luca!</div>
+        {props.session.firstname
+        ? 
+        <div className="header_welcome">Welcome {props.session.firstname + ' ' + props.session.lastname}!</div>
+        :
+        null}
       </div>
 
       <div className="darker">
@@ -28,4 +38,4 @@ const Header = () => {
   );
 }
 
-export default Header;
+export default connect(mapStateToProps)(Header);

@@ -20,7 +20,7 @@ const Mainbar = ({ item, userData, finalmenteData }) => {
                 width= "27px" 
                 height="27px"
               />
-              {userData.deposit}
+              {parseInt(userData.deposit).toFixed(8)}
             </span>
           </div>
           <div className="profit">
@@ -49,7 +49,7 @@ const Mainbar = ({ item, userData, finalmenteData }) => {
                 width= "27px" 
                 height="27px"
               />
-              {userData.balance}
+              {parseInt(userData.balance).toFixed(8)}
             </span>
           </div>
           <div className="growth">
@@ -69,7 +69,7 @@ const Mainbar = ({ item, userData, finalmenteData }) => {
                 width= "27px" 
                 height="27px"
               />
-              {userData.withdraw}
+              {parseInt(userData.withdraw).toFixed(8)}
             </span>
           </div>
           <div className="roi">
@@ -92,7 +92,7 @@ const Mainbar = ({ item, userData, finalmenteData }) => {
                 width= "27px" 
                 height="27px"
               />
-              {finalmenteData.deposit}
+              {parseInt(finalmenteData.deposit).toFixed(8)}
             </span>
           </div>
           <div className="investment">
@@ -112,7 +112,7 @@ const Mainbar = ({ item, userData, finalmenteData }) => {
                 width= "27px" 
                 height="27px"
               />
-              {finalmenteData.balance}
+              {parseInt(finalmenteData.balance).toFixed(8)}
             </span>
           </div>
           <div className="growth">
@@ -132,7 +132,7 @@ const Mainbar = ({ item, userData, finalmenteData }) => {
                 width= "27px" 
                 height="27px"
               />
-              {finalmenteData.withdraw}
+              {parseInt(finalmenteData.withdraw).toFixed(8)}
             </span>
           </div>
           <div className="roi">

@@ -19,6 +19,7 @@ import CapitalWithdrawTwo from '../Withdraw/Capital-Withdraw-Two/CapitalWithdraw
 import CapitalWithdrawThree from '../Withdraw/Capital-Withdraw-Three/CapitalWithdrawThree';
 import ProfitWithdrawTwo from '../Withdraw/Profit-Withdraw-Two/ProfitWithdrawTwo';
 import ProfitWithdrawThree from '../Withdraw/Profit-Withdraw-Three/ProfitWithdrawThree';
+import NotFound from '../Not-Found';
 import { AuthRoute, ProtectedRoute } from "../../utils/route";
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
           <Route exact path="/">
             <Redirect to="/user/login" />
           </Route>
+          <Route component={NotFound}/>
         </Switch>
       </Router>
     </div>
