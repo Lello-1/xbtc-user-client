@@ -71,7 +71,7 @@
   width: 50%;
   font-size: 1.4em;
   margin-top: 5%;
-  padding: 12px 0;
+  padding: 10px 0;
 }
 
 .withdraw_one_container .Button .form_button:hover {
@@ -148,5 +148,15 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 7px;
   cursor: pointer;
   background: #d7dcdf;
+  border-radius: 3px;
+}
+
+.profit_warning {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.15);
+  font-size: 1em !important;
+  font-weight: 400 !important;
+  padding: 5px;
+  border: 1px solid red;
   border-radius: 3px;
 }

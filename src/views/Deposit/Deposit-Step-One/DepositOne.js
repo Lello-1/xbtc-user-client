@@ -25,7 +25,6 @@ const DepositOne = () => {
       .then((res) => res.json())
       .then((res) => {
         if(res.result === 'successfull') {
-          console.log('FETCH RESULT: ', res);
           setBitcoin('');
           history.push('/user/deposit-two');
         }

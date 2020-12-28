@@ -1,6 +1,6 @@
 import './Button.css';
 
-const Button = ({ href, ghostButton, ghostButtonContent, formButton }) => {
+const Button = ({ href, ghostButton, ghostButtonContent, formButton, onClick }) => {
 
   return (
     <div className="Button">
@@ -8,7 +8,7 @@ const Button = ({ href, ghostButton, ghostButtonContent, formButton }) => {
       ?
         <a href={href} className="ghost_button">{ghostButtonContent}</a>
       :
-        <input className="form_button" type="submit" value={formButton} />}
+        <input className="form_button" type="submit" value={formButton} onClick={onClick} />}
     </div>
   );
 }

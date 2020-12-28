@@ -4,8 +4,6 @@ import Form from '../../components/Form';
 import { connect } from "react-redux";
 import { signup } from "../../actions/session";
 import { useState } from 'react';
-import { useHistory } from "react-router-dom";
-
 
 const mapStateToProps = ({ errors }) => ({
   errors
@@ -17,9 +15,6 @@ const mapDispatchToProps = dispatch => ({
 
 //============== REGISTER COMPONENT =================
 const Register = ({ errors, signup }) => {
-  
-  const history = useHistory();
-  const [error, setError] = useState('');
 
   //Page items to send to children
   const pageItems = {
@@ -35,26 +30,17 @@ const Register = ({ errors, signup }) => {
   const handleRegister = e => {
     e.preventDefault();
 
-    const password = e.target[5].value;
-    const confirmPassword = e.target[6].value;
+    const user = {
+      firstname: e.target[0].value,
+      lastname: e.target[1].value,
+      email: e.target[2].value,
+      number: e.target[3].value,
+      country: e.target[4].value,
+      password: e.target[5].value,
+      confirmPassword: e.target[6].value
+    };
 
-    //Password confirmation validation
-    if (password === confirmPassword) {
-
-      const user = {
-        firstname: e.target[0].value,
-        lastname: e.target[1].value,
-        email: e.target[2].value,
-        number: e.target[3].value,
-        country: e.target[4].value,
-        password: e.target[5].value
-      };
-  
-      signup(user);
-    } else {
-      setError('Passwords do not match!');
-    }
-
+    signup(user);
   };  
 
   return (
@@ -65,7 +51,6 @@ const Register = ({ errors, signup }) => {
           buttonType={'submit'}
           formButton={pageItems.formButton}
           handleRegister={handleRegister}
-          error={error}
         />
       </div>
     </div>

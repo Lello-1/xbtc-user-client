@@ -1,19 +1,32 @@
 import './Form.css';
 import Button from '../Button';
 import { connect } from "react-redux";
+import { useState, useEffect } from 'react';
 
 const mapStateToProps = ({ errors }) => ({
   errors
 });
 
 const Form = ({ formButton, handleRegister, handleLogin, errors }) => {
-  
+
+  const [errorClass, setErrorClass] = useState(false);
+
+  useEffect(() => {
+    if(errors.length > 1) {
+      setErrorClass(true);
+    }
+  }, [errors]);
+
+  console.log(errors);
+
   return (
     <div className="Form">
       { formButton === 'Sign Up'
       ?
-      <form className="register_form" onSubmit={handleRegister}>
-        <p>{ errors }</p>
+      <form className="register_form" onSubmit={ handleRegister }>
+        {errorClass
+        ? <p className="error_style">{ errors }</p>
+        : null}
         <h3>Sign Up to XBTC Dashboard</h3>
         <div className="names">
           <input
