@@ -10,11 +10,18 @@ const WithdrawOne = () => {
   // State variables
   const [profitInput, setProfitInput] = useState(0);
   const [profitAmount, setProfitAmount] = useState(0);
-  const [capitalAmount, setCapitalAmount] = useState('');
+  const [capitalAmount, setCapitalAmount] = useState(0);
+  const [capitalVar, setCapitalVar] = useState(0);
+  const [sliderValue, setSliderValue] = useState('100');
+  const [capitalWalletAddress, setCapitalWalletAddress] = useState('');
+  const [capitalPassword, setCapitalPassword] = useState('');
   const [profitWalletAddress, setProfitWalletAddress] = useState('');
   const [profitPassword, setProfitPassword] = useState('');
   const [warningClass, setWarningClass] = useState(false);
+  const [capitalWarningClass, setCapitalWarningClass] = useState(false);
+  const [capitalWarning, setCapitalWarning] = useState('');
   const [warning, setWarning] = useState('');
+
   const history = useHistory();
 
   // Request options
@@ -40,9 +47,16 @@ const WithdrawOne = () => {
     fetch('/user/user-amounts', optionsOne)
       .then((res) => res.json())
       .then((res) => {
+
         setProfitAmount(res.profit);
+        setCapitalVar(res.capital);
+        setCapitalAmount(res.capital);
       });
   }, []);
+
+  //====================================================================
+  //========================= PROFIT WITHDRAW ==========================
+  //====================================================================
 
   // Handle profit withdraw request
   const handleProfitWithdraw = (e) => {
@@ -57,7 +71,8 @@ const WithdrawOne = () => {
           setProfitPassword('');
           history.push('/user/profit-withdraw-two');
         } else {
-          // console.log(res.error);
+          console.log(res);
+          setWarningClass(true);
           setWarning(res.error);
         }
       });
@@ -85,6 +100,54 @@ const WithdrawOne = () => {
     setProfitPassword(e.target.value);
   };
 
+  //====================================================================
+  //========================= CAPITAL WITHDRAW =========================
+  //====================================================================
+
+  const capitalOptions = {
+    method: 'POST',
+    credentials: 'include',
+    body: JSON.stringify({
+      capitalAmount,
+      capitalWalletAddress,
+      capitalPassword,
+      sliderValue
+    }),
+    headers: { 'Content-Type': 'Application/JSON' }
+  }
+
+  const handleCapitalWithdraw = (e) => {
+    e.preventDefault();
+
+    fetch('/user/capital-withdraw', capitalOptions)
+      .then((res) => res.json())
+      .then((res) => {
+        if(res.result === 'success') {
+          setCapitalWalletAddress('');
+          setCapitalPassword('');
+          history.push('/user/capital-withdraw-two');
+        } else {
+          console.log(res);
+          setCapitalWarning(res.error);
+          setCapitalWarningClass(true);
+        }
+      });
+  };
+
+  const handleSliderChange = (e) => {
+    let capAmount = (Number(e.target.value) / 100) * Number(capitalVar).toFixed(8);
+    setSliderValue(e.target.value);
+    setCapitalAmount(capAmount);
+  };
+
+  const capitalWalletAddressChange = (e) => {
+    setCapitalWalletAddress(e.target.value);
+  };
+
+  const capitalPasswordChange = (e) => {
+    setCapitalPassword(e.target.value);
+  };
+
   return (
     <div className="WithdrawOne">
       <Sidebar />
@@ -94,7 +157,7 @@ const WithdrawOne = () => {
           <div className="align">
             <p>Your profit:</p>
             <img src={bitcoin} alt="bitcoin"/>
-            <p>{parseInt(profitAmount).toFixed(8)}</p>
+            <p>{Number(profitAmount).toFixed(8)}</p>
           </div>
           {warningClass
           ? <p className="profit_warning">{warning}</p>
@@ -113,17 +176,24 @@ const WithdrawOne = () => {
           <input
             type="password"
             placeholder="Enter Password"
+            autoComplete="current-password"
             onChange={profitPasswordChange}
           />
-          <Button />
+          <Button formButton="Withdraw" />
         </form>
 
-        <div className="capital_withdraw_bar">
+        <form className="capital_withdraw_bar" onSubmit={handleCapitalWithdraw}>
           <h3>Capital Withdraw</h3>
           <div className="align">
             <p>Capital Selected:</p>
             <img src={bitcoin} alt="bitcoin"/>
-            <p>1.93847058</p>
+            <p>{Number(capitalAmount).toFixed(8)}</p>
+          </div>
+          {capitalWarningClass
+          ? <p className="profit_warning">{capitalWarning}</p>
+          : null}
+          <div className="percentage_container">
+            <div className="range_slider_percentage">{sliderValue}%</div>
           </div>
           <input
             id="slider"
@@ -131,22 +201,27 @@ const WithdrawOne = () => {
             min="0"
             max="100"
             step="25"
+            defaultValue="100"
+            onChange={handleSliderChange}
           />
-          <input
+          {/* <input
             type="number"
             placeholder="Enter exact amount in Bitcoin"
             step="0.00000001"
-          />
+          /> */}
           <input
             type="text"
             placeholder="Wallet Address"
+            onChange={capitalWalletAddressChange}
           />
           <input
             type="password"
             placeholder="Enter Password"
+            autoComplete="current-password"
+            onChange={capitalPasswordChange}
           />
-          <Button />
-        </div>
+          <Button formButton="Withdraw" />
+        </form>
       </div>
     </div>
   );

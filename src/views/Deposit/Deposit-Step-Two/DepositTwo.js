@@ -64,7 +64,7 @@ const DepositTwo = () => {
             <button onClick={() => handleCopy()}><ClipboardIcon /></button>
           </div>
           <img
-            src={`http://api.qrserver.com/v1/create-qr-code/?data==${walletAddress}&data=${amount}&size=150x150`}
+            src={`http://api.qrserver.com/v1/create-qr-code/?data=${walletAddress}&data=${amount}&size=150x150`}
             alt="qr code"
           />
           <div className="button_container">

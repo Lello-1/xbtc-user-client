@@ -69,7 +69,7 @@
 
 .withdraw_one_container .Button .form_button {
   width: 50%;
-  font-size: 1.4em;
+  font-size: 1.2em;
   margin-top: 5%;
   padding: 10px 0;
 }
@@ -84,6 +84,25 @@ input[type=range] {
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
   padding: 15px 0;
+}
+
+.percentage_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.range_slider_percentage {
+  background: #2c3e50;
+  color: white;
+  width: 20%;
+  padding: 5px;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+.range_slider_percentage:hover {
+  cursor: pointer;
 }
 
 input[type=range]::-webkit-slider-thumb {

@@ -1,5 +1,6 @@
 import React from 'react';
 import './AccountItem.css';
+import { formatDate } from '../../../utils/formatDate';
 
 const AccountItem = ({ item, accountHistory }) => {
 
@@ -20,7 +21,7 @@ const AccountItem = ({ item, accountHistory }) => {
       ? <tr></tr>
       : <tr className="AccountItem table_head">
         {item.confirmed === 'confirmed' || item.confirmed === 'completed'
-        ? <td>{item.date}</td>
+        ? <td>{formatDate(item.date)}</td>
         : item.confirmed === 'pending'
           ? <td>Pending...</td>
           : <td></td>}

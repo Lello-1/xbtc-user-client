@@ -61,6 +61,7 @@ const DepositThree = () => {
             type="text"
             placeholder="Transaction ID"
             onChange={handleChange}
+            required
           />
           <Button />
         </form>
@@ -68,5 +69,7 @@ const DepositThree = () => {
     </div>
   );
 }
+
+// Export ddefault the deposit three view component...
 
 export default DepositThree;

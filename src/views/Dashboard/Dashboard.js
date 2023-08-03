@@ -32,6 +32,7 @@ const Dashboard = () => {
     fetch(apiUrl, options)
     .then((res) => res.json())
     .then((res) => {
+      console.log(res.userData);
       setUserData(res.userData);
       setFinalmenteData(res.finalmenteData);
     });
